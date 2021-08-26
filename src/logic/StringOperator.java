@@ -2,7 +2,9 @@ package logic;
 
 public class StringOperator {
 	
-	public static boolean main(String[] args) {
+	private StringOperator(){}
+	
+	public static boolean main() {
 
 		String str1 = "ciao ";
 		String str2 = "come va";
@@ -11,23 +13,18 @@ public class StringOperator {
 		
 		String res2 = addString(str1, str2);
 		
-		Boolean b = areEquals(res1, res2);
-		
-		return b;
+		return areEquals(res1, res2);
 	}
 	
 	private static Boolean areEquals(String str1, String str2) {
-		Boolean b= str1.equals(str2);
-		return b;
+		return str1.equals(str2);
 	}
 
 	private static String concatString(String str1, String str2) {
-		String str = str1 + str2;
-		return str;
+		return str1 + str2;
 	}
 
 	private static String addString(String str1, String str2) {
-		String str = str1.concat(str2);
-		return str;
+		return str1.concat(str2);
 	}
 }
